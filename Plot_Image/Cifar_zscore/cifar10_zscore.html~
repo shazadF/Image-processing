@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <caption>CIFAR10 Normalization</caption>
+
+  <tr>
+    <th>epoch 2</th>
+    <th>epoch 4</th>
+    <th>epoch 6</th>
+    <th>epoch 8</th>
+    <th>epoch 10</th>
+  </tr>
+  <tr>
+    <th><img src="1.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="33.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="65.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="97.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="129.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="2.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="34.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="66.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="98.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="130.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="3.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="35.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="67.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="99.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="131.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="4.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="36.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="68.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="100.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="132.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="5.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="37.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="69.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="101.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="133.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="6.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="38.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="70.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="102.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="134.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="7.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="39.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="71.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="103.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="135.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="8.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="40.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="72.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="104.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="136.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="9.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="41.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="73.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="105.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="137.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="10.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="42.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="74.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="106.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="138.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="11.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="43.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="75.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="107.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="139.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="12.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="44.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="76.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="108.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="140.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="13.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="45.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="77.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="109.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="141.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="14.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="46.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="78.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="110.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="142.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="15.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="47.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="79.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="111.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="143.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="16.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="48.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="80.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="112.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="144.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="17.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="49.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="81.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="113.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="145.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="18.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="50.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="82.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="114.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="146.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="19.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="51.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="83.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="115.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="147.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="20.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="52.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="84.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="116.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="148.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="21.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="53.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="85.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="117.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="149.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="22.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="54.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="86.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="118.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="150.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="23.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="55.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="87.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="119.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="151.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="24.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="56.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="88.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="120.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="152.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="25.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="57.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="89.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="121.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="153.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="26.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="58.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="90.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="122.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="154.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="27.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="59.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="91.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="123.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="155.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="28.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="60.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="92.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="124.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="156.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="29.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="61.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="93.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="125.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="157.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="30.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="62.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="94.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="126.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="158.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="31.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="63.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="95.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="127.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="159.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+  <tr>
+    <th><img src="32.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="64.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="96.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="128.png" style="width:300px;height:200px;" align = "center"></th>
+    <th><img src="160.png" style="width:300px;height:200px;" align = "center"></th>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+numpy
+scikit
+Theano = 0.8.2

@@ -1,0 +1,14 @@
+set title "3-different Independent Component Analysis (Validation Accuracy)"
+set xlabel  "Epoch(Number)"
+set ylabel "Validation accuracy"
+set key default
+set key box
+set key bottom right
+set grid
+set yrange [.45:.70]
+set xrange [0:100]
+set datafile separator ","
+set term png
+set output "new.png"
+plot 'cifar10_ica.csv' using 1:5 with linespoints lt -1 pi 1 lc rgb "green" lw 2 title columnheader, 'cifar10_ica_5-5.csv' using 1:5 with linespoints lt -1 pi 1 lc rgb "red" lw 2 title columnheader, 'cifar10_ica_7-7.csv' using 1:5 with linespoints lt -1 pi 1 lc rgb "magenta" lw 2 title columnheader
+#'cifar10_ica_5-5.csv' using 1:5 with line lt 1 pi -6 lc rgb "red" pi -3  lw 1 title columnheader
